@@ -1,4 +1,4 @@
-import {readFileSync} from 'fs';
+import {readFileSync, writeFileSync} from 'fs';
 import {validateHeader} from "./validate-header.js";
 import {validateBlock} from "./validate-block.js";
 
@@ -18,7 +18,10 @@ export const run = async () => {
         await validateHeader(header, txids);
 
         // Validate the block
-        validateBlock(coinbase, txids);
+        const result = validateBlock(coinbase, txids);
+
+        // Write the result to a file
+        writeFileSync('../result.json', JSON.stringify(result, null, 2));
     } catch (error) {
         console.log(error.message);
         throw error;

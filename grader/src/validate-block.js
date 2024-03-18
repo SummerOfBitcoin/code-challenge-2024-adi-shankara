@@ -74,4 +74,8 @@ export const validateBlock = (coinbase, txids) => {
     }
 
     console.log(`Congratulations! Block is valid with a total fee of ${totalFee} sats and a total weight of ${totalWeight}!`);
+    return {
+        fee: totalFee.toString(),
+        weight: totalWeight.toString(),
+    }
 }
