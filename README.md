@@ -30,9 +30,18 @@ The difficulty target is `0000ffff0000000000000000000000000000000000000000000000
 ## Evaluation Criteria
 Your submission will be evaluated based on the following criteria:
 
+- **Score**: Your code output will be scored bases on the fee collected and the amount of available block space utilised. **You must score at least 60 points to pass the challenge.**
 - **Correctness**: The `output.txt` file must be correctly formatted in the manner described above.
 - **Code Quality**: Your code should be well-organized, commented, and follow best practices.
 - **Efficiency**: Your solution should process transactions and mine the block efficiently.
+
+## Document your work
+
+Apart from the code, you must also publish a `SOLUTION.md` file explaining your solution in the following format:
+- **Design Approach:** Describe the approach you took to design your block construction program, explain all the key concepts of creating a valid block.
+- **Implementation Details:** Provide pseudo code of your implementation, including sequence of logic, algorithms and variables used etc.
+- **Results and Performance:** Present the results of your solution, and analyze the efficiency of your solution.
+- **Conclusion:** Discuss any insights gained from solving the problem, and outline potential areas for future improvement or research. Include a list of references or resources consulted during the problem-solving process.
 
 ## What NOT to Do
 
@@ -41,6 +50,9 @@ In this challenge, it's crucial to understand and adhere to the following restri
 - **Do Not Use Bitcoin Libraries for Transaction Validation:** You must not use any Bitcoin-specific libraries or frameworks that automate transaction validation processes. The intent of this challenge is for you to understand and implement the validation logic manually.
 - **Permissible Libraries:** The use of standard cryptographic libraries, such as secp256k1 for elliptic curve cryptography, and standard hashing libraries (e.g., for SHA-256) is allowed and encouraged. These libraries are essential for implementing the cryptographic underpinnings of bitcoin without reinventing the wheel.
  - **Implement the Mining Algorithm Yourself:** You are required to implement the mining algorithm on your own. This includes creating a way to correctly form a block header, calculate the hash, and meet the challenge of finding a hash below a certain target.
+
+### AI Usage Disclaimer:
+You may use AI tools like ChatGPT to gather information and explore alternative approaches, but avoid relying solely on AI for complete solutions. Verify and validate any insights obtained and maintain a balance between AI assistance and independent problem-solving.
 
 ## Why These Restrictions?
 These restrictions are designed to deepen your understanding of bitcoin technicals.
